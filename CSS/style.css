@@ -184,7 +184,7 @@ span.sub-heading {
 /*favourites*/
 .favourites {
   width: 100%;
-  padding: 100px 20px;
+  padding: 20px;
   align-items: center;
 }
 
@@ -296,11 +296,11 @@ span.sub-heading {
   .about-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    grid-gap: 10px;
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    margin: 10px;
   }
   .about-content .jacky,
   .about-content .lucky {
@@ -317,6 +317,14 @@ span.sub-heading {
   .about-content .lucky p {
     text-align: justify;
     padding: auto;
+  }
+  .about-content .jacky img,
+  .about-content .lucky img {
+    width: 50%;
+    border-radius: 50px;
+    justify-self: center;
+    align-self: center;
+    border: none;
   }
 }
 .intro-img img {

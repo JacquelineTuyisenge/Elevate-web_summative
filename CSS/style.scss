@@ -191,7 +191,7 @@ span.sub-heading {
 
 .favourites {
   width: 100%;
-  padding: 100px 20px;
+  padding: 20px;
   align-items: center;
 }
 .favourites h1 {
@@ -306,11 +306,11 @@ span.sub-heading {
   .about-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    grid-gap: 10px;
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    margin: 10px;
     .jacky,
     .lucky {
       justify-self: center;
@@ -324,6 +324,13 @@ span.sub-heading {
       p{
         text-align: justify;
         padding: auto;
+      }
+      img {
+        width: 50%;
+        border-radius: 50px;
+        justify-self: center;
+        align-self: center;
+        border: none;
       }
     }
   }
