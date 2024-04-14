@@ -6,10 +6,6 @@ import {EMAIL_FROM} from "../env.js";
 
 
 $(document).ready(function () {
-  console.log(
-    "5555555555555555555566666666666666666666666",
-    EMAIL_HOST
-  );
   $("#getInTouch").submit(function (event) {
     event.preventDefault();
     // Send email
@@ -18,10 +14,6 @@ $(document).ready(function () {
     var messageBody = `<h3> Email: ${email}<h3> 
         <h4> has sent you the following message:<h4>
         <h4> ${message} </h4>`;
-    console.log(
-      "77777777777777777777777777777777777777777777777777",
-      EMAIL_HOST
-    );
 
     Email.send({
       Host: EMAIL_HOST,
