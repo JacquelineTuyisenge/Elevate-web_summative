@@ -1,258 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Share</title>
-    <link rel="icon" href="images/backround-homepage-img.jpg" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/bootstrap-grid.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body id="body">
-    <header id="header">
-      <nav id="navbar" class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a id="logo" class="navbar-brand text-success fw-bold" href="index.html">FOOD SHARE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sign.html">Sign in</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Share</title>
+  <link rel="icon" href="images/backround-homepage-img.jpg" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/bootstrap-grid.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body id="body">
+  <header id="header">
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a id="logo" class="navbar-brand text-success fw-bold" href="index.html">FOOD SHARE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign.html">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <!--home section-->
+  <!-- Cookie consent popup -->
+  <div id="cookieConsentPopup" class="cookie-consent-popup">
+    <div class="cookie-consent-content">
+      <h3>This website uses cookies</h3>
+      <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept
+        our use of cookies.</p>
+      <a href="#home"><button id="acceptCookiesBtn" class="btn btn-success">Accept</button></a>
+    </div>
+  </div>
 
-    <main>
-      <section class="home" id="home">
-        <div class="home-content">
-          <div class="intro">
-            <h2>
-              <span class="heading">Welcome to FoodShare,</span><br />
-              <span class="sub-heading">
-                where every plate holds a story and every heart finds a
-                home!!</span
-              >
-            </h2>
-          </div>
+
+  <main>
+    <!--home page-->
+    <style>
+      @media (max-width: 768px) {
+        .cookie-consent-popup {
+          display: none !important;
+
+        }
+      }
+      .cookie-consent-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      .cookie-consent-content {
+        text-align: center;
+      }
+
+      .btn {
+        padding: 10px 20px;
+
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+
+      }
+
+      .home {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      .intro-img {
+        position: absolute;
+        top: 7%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        float: right;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        animation: float 5s ease-in-out infinite;
+        width: 50%;
+        animation: slide-up 10s linear infinite;
+      }
+
+      .floating-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: slide-up 10s linear infinite;
+
+      }
+
+      .home-content {
+        position: relative;
+        z-index: 1;
+        font-size: 80px;
+        padding: 20px;
+        text-align: left;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        float: left;
+        width: 50%;
+        padding: 50px;
+
+
+
+      }
+
+      #heading {
+        animation: slide-left 5s forwards;
+      }
+
+      .moving-text {
+        opacity: 0;
+        animation: fade-in 10s forwards;
+
+      }
+
+      .jacky,
+      .lucky {
+        animation: slide-right 5s forwards;
+
+      }
+
+      #about {
+        animation: slide-up 10s linear infinite;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slide-up {
+        0% {
+          transform: translateY(-6%);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+
+      }
+
+      @keyframes slide-left {
+        0% {
+          transform: translateX(-6%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slide-right {
+        0% {
+          transform: translateX(6%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+
+      }
+
+      @media screen and (max-width: 768px) {
+        .home-content {
+          padding: 10px;
+        }
+      }
+
+      @keyframes animatedBackground {
+        0% {
+          background-position: 0 0;
+        }
+
+        100% {
+          background-position: 100% 0;
+        }
+      }
+
+      .header {
+        background-image: url('your-image.jpg');
+        animation: animatedBackground 10s linear infinite;
+      }
+
+
+      .social-media-icons .bx {
+        font-size: 40px;
+      }
+    </style>
+    </head>
+
+    <body>
+      <main>
+        <section class="home" id="home">
           <div class="intro-img">
-            <img src="images/home-bg-img.jpg" alt="home image" />
+            <img src="images/home-bg-img.jpg" alt="home image" class="floating-img" />
           </div>
-        </div>
-        <button class="btn"><a href="/">Get Started</a></button>
-      </section>
+          <div class="home-content">
+            <div class="intro">
+              <h2>
+                <span class="heading" id="heading"
+                  style="font-size: 60px; font-weight: bold;  animation: slide-left 5s forwards;">Welcome to <span
+                    class="heading" id="heading"
+                    style="color: rgb(2, 112, 2);font-size: 60px; font-weight: bold;">FoodShare,</span></span><br />
+                <br>
+                <span class="sub-heading moving-text" style="font-weight: bold;">
+                  where every plate holds a story and every heart finds a
+                  home!!</span>
+              </h2>
 
-      <!--section about-->
-      
-      <section class="about-us" id="about">
-        <h1>About us</h1>
-        <div class="about-content">
-          <div class="jacky">
-            <p>
-              Meet Jacqueline Tuyisenge, one of the creative minds behind our
-              food sharing community. With a deep passion for culinary arts,
-              Jacqueline's love for cooking transcends the kitchen and extends
-              to the heart of our app.
-            </p>
-            <img src="images/Jacky.jpg" alt="profie picture" />
+              <button class="btn" style="margin-top: 50px;"><a href="/">Get Started</a></button>
+            </div>
+        </section>
+
+
+        <!--section about-->
+        <section class="about-us" id="about">
+          <h1 class="text-center p-3 m-1" style="font-weight: bold;">About us</h1>
+          <div class="about-content">
+            <div class="jacky" style=" box-shadow: 0px 0px 10px rgba(0, 0, 0.5, 1.5); height: 100%; ">
+              <div>
+                <p>
+                  Meet Jacqueline Tuyisenge, one of the creative minds behind our food sharing community. With a deep
+                  passion for culinary arts, Jacqueline's love for cooking transcends the kitchen and extends to the
+                  heart
+                  of our app.</p>
+                <br>
+                <br>
+                <div class="social-media-icons">
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-twitter'
+                      style="color: rgb(12, 204, 217);"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-linkedin'
+                      style="color:rgb(49, 122, 211) ;"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-facebook'></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-instagram' style="color: rgb(127, 12, 50);"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-github'
+                      style="color: rgb(55, 52, 52);"></i></a>
+
+
+                </div>
+
+              </div>
+              <div>
+                <img src="images/Jacky.jpg" alt="profile picture" />
+              </div>
+
+
+            </div>
+            <div class="lucky" style=" box-shadow: 0px 0px 10px rgba(0, 0, 0.5, 1.5);">
+              <div>
+                <p>
+                  Meet Aloysie Murekatete, the one who brings a unique flair to our food sharing app. Aloysie's journey
+                  in
+                  the world of cooking is marked by a genuine curiosity and a desire to experiment with diverse
+                  cuisines.
+                </p>
+
+                <br>
+                <br>
+
+                <div class="social-media-icons">
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-twitter'
+                      style="color: rgb(12, 204, 217);"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-linkedin'
+                      style="color:rgb(49, 122, 211) ;"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-facebook'></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-instagram' style="color: rgb(127, 12, 50);"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-github'
+                      style="color: rgb(55, 52, 52);"></i></a>
+
+
+                </div>
+              </div>
+              <div>
+                <img src="images/aloysie.jpg" alt="profile picture" />
+              </div>
+
+
+
+            </div>
           </div>
-          <div class="lucky">
-            <p>
-              Meet Aloysie Murekatete, the one who brings a unique flair to our
-              food sharing app. Aloysie's journey in the world of cooking is
-              marked by a genuine curiosity and a desire to experiment with
-              diverse cuisines.
-            </p>
-            <img src="images/aloysie.jpg" alt="profile picture" />
           </div>
-        </div>
-      </section>
 
-      <!-- favorite section -->
+          </div>
+        </section>
 
-      <section class="favourites">
-        <h1 id="favorites">Favourites</h1>
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <div id="cardslide" class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Fufu Feast</h5>
-                      <p class="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
-                      </p>
-                      <button class="btn"><a href="/">Get Started</a></button>
+        <!-- favorite section -->
+
+        <section class="favourites" style="animation: fadeIn 5s ease-in; animation-delay: 0.5s; animation-fill-mode: forwards;">
+          <h1 id="favorites" style="animation: slideInDown 1s ease-in; font-weight: bold;">Favourites</h1>
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div id="cardslide" class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Fufu Feast</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <button class="btn"><a href="/">Get Started</a></button>
+                      </div>
+                      <div>
+                        <img src="images/fufu.jpg" alt="fufuimage" />
+                      </div>
                     </div>
-                    <div>
-                      <img src="images/fufu.jpg" alt="fufuimage" />
+                  </div>
+                  <div class="col-sm-6">
+                    <div id="cardslide" class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Jollof Feast</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <button class="btn"><a href="/">Get Started</a></button>
+                      </div>
+                      <div>
+                        <img src="images/jollof.jpg" alt="fufuimage" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div id="cardslide" class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Jollof Feast</h5>
-                      <p class="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
-                      </p>
-                      <button class="btn"><a href="/">Get Started</a></button>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div id="cardslide" class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Fufu Feast</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <button class="btn"><a href="/">Get Started</a></button>
+                      </div>
+                      <div>
+                        <img src="images/fufu.jpg" alt="fufuimage" />
+                      </div>
                     </div>
-                    <div>
-                      <img src="images/jollof.jpg" alt="fufuimage" />
+                  </div>
+                  <div class="col-sm-6">
+                    <div id="cardslide" class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Fufu Feast</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <button class="btn"><a href="/">Get Started</a></button>
+                      </div>
+                      <div>
+                        <img src="images/fufu.jpg" alt="fufuimage" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div id="cardslide" class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Fufu Feast</h5>
-                      <p class="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
-                      </p>
-                      <button class="btn"><a href="/">Get Started</a></button>
-                    </div>
-                    <div>
-                      <img src="images/fufu.jpg" alt="fufuimage" />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div id="cardslide" class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Fufu Feast</h5>
-                      <p class="card-text">
-                        With supporting text below as a natural lead-in to
-                        additional content.
-                      </p>
-                      <button class="btn"><a href="/">Get Started</a></button>
-                    </div>
-                    <div>
-                      <img src="images/fufu.jpg" alt="fufuimage" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-      <section class="contact-us">
-        <h1 id="contact" class="text-center p-3 m-3">Contact Us</h1>
-        <div class="container text-center">
-          <div class="row">
+        </section>
+
+        <!-- contact us -->
+
+        <section class="contact-us">
+          <h1 id="contact" class="text-center p-3 m-3">Contact Us</h1>
+          <div class="container text-center">
+            <div class="row">
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <h3 class="p-5 text-light">What we do</h1>
-                <ul id="footerNav">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="#favorites">Favourites</a></li>
-                </ul>
+                  <ul id="footerNav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#favorites">Favourites</a></li>
+                  </ul>
               </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-4 col-md-6 col-sm-12">
                 <h3 class="p-5 text-light">Our Adress</h1>
-                <ul id="adress" class="list-group">
-                  <li class="list-group-item bg-success-light">1, Kibagabaga Street, 5th Avenue, Lagos.</li>
-                  <li class="list-group-item bg-success-light">Tel: +223 987 678 999</li>
-                  <li class="list-group-item bg-success-light">Email: foodshare@yahoo.com</li>
-                  <li class="list-group-item bg-success-light">web: foodshare.com</li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div id="myModal" class="modal">
-                <div class="modal-content">
-                  <span class="close">&#10004;</span>
-                  <p id="modalText"></p>
-                </div>
+                  <ul id="adress" class="list-group">
+                    <li class="list-group-item bg-success-light">1, Kibagabaga Street, 5th Avenue, Lagos.</li>
+                    <li class="list-group-item bg-success-light">Tel: +223 987 678 999</li>
+                    <li class="list-group-item bg-success-light">Email: foodshare@yahoo.com</li>
+                    <li class="list-group-item bg-success-light">web: foodshare.com</li>
+                  </ul>
               </div>
-              <h3 class="p-5 text-light">Get in touch</h1>
-              <form id="getInTouch" class="row g-3 border rounded p-3 bg-success-light">
-                <div class="col-12">
-                  <label for="inputEmail4" class="form-label text-white">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" name="email">
-                  <div id="emailError" class="form-text error-message text-danger"></div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&#10004;</span>
+                    <p id="modalText"></p>
+                  </div>
                 </div>
-                <div class="col-12">
-                  <label for="inputmessage" class="form-label text-white">Messages</label>
-                  <input type="text" class="form-control" placeholder="Hello...." id="message" name="message">
-                  <div id="messageError" class="form-text error-message text-danger"></div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn text-center text-white">SEND</button>
-                </div>
-              </form>
+                <h3 class="p-5 text-light">Get in touch</h1>
+                  <form id="getInTouch" class="row g-3 border rounded p-3 bg-success-light">
+                    <div class="col-12">
+                      <label for="inputEmail4" class="form-label text-white">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" name="email">
+                      <div id="emailError" class="form-text error-message text-danger"></div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputmessage" class="form-label text-white">Messages</label>
+                      <input type="text" class="form-control" placeholder="Hello...." id="message" name="message">
+                      <div id="messageError" class="form-text error-message text-danger"></div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn text-center text-white">SEND</button>
+                    </div>
+                  </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer class="text-center text-white bg-secondary p-0 m-0">
-      <p class="p-3 m-3 text-dark text-center">&copy; 2023 Food Share app,  All Rights Reserved</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="module" src="env.js"></script>
-    <script type="module" src="JS/script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  </body>
+        </section>
+      </main>
+      <footer class="text-center text-white bg-secondary p-0 m-0">
+        <p class="p-3 m-3 text-dark text-center">&copy; 2023 Food Share app, All Rights Reserved</p>
+      </footer>
+      <script src="index.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script type="module" src="env.js"></script>
+      <script type="module" src="JS/script.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </body>
+
 </html>

@@ -19,6 +19,171 @@ $text-color-green: rgb(1, 36, 1);
   font-family: "poppins", sans-serif;
 }
 
+/* CSS for cookie consent popup */
+.cookie-consent-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.cookie-consent-content {
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.intro-img {
+  position: absolute;
+  top: 7%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  float: right;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  animation: float 5s ease-in-out infinite;
+  width: 50%;
+  animation: slide-up 10s linear infinite;
+}
+
+.floating-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slide-up 10s linear infinite;
+
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  font-size: 80px;
+  padding: 20px;
+  text-align: left;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  float: left;
+  width: 50%;
+  padding: 50px;
+
+
+
+}
+
+#heading {
+  animation: slide-left 5s forwards;
+}
+
+.moving-text {
+  opacity: 0;
+  animation: fade-in 10s forwards;
+  /* Adjust the duration here */
+}
+
+.jacky,
+.lucky {
+  animation: slide-right 5s forwards;
+
+}
+
+#about {
+  animation: slide-up 10s linear infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-6%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-6%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(6%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .home-content {
+    padding: 10px;
+  }
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.header {
+  background-image: url('your-image.jpg');
+  animation: animatedBackground 10s linear infinite;
+}
+
+
+.social-media-icons .bx {
+  font-size: 40px;
+}
+
 #body {
   width: 100%;
   height: 100%;
@@ -32,7 +197,8 @@ $text-color-green: rgb(1, 36, 1);
 
 #navbar.navbar {
   background-color: rgba(1, 48, 1, 0.134);
-  border-bottom: 0.5px dashed rgba(244, 13, 5, 0.182);;
+  border-bottom: 0.5px dashed rgba(244, 13, 5, 0.182);
+  ;
   position: fixed;
   width: 100%;
   height: auto;
@@ -69,11 +235,13 @@ $text-color-green: rgb(1, 36, 1);
   font-family: "poppins", sans-serif;
   font-weight: 600;
 }
+
 .navbar ul li a:hover,
 .navbar ul li a:focus,
 .navbar ul li a:active {
   color: $call-to-action;
 }
+
 // /*home page*/
 
 .home {
@@ -83,6 +251,7 @@ $text-color-green: rgb(1, 36, 1);
   flex-direction: column;
   align-items: center;
 }
+
 .home-content {
   width: 100%;
   padding: 150px;
@@ -90,23 +259,28 @@ $text-color-green: rgb(1, 36, 1);
   justify-content: space-around;
   gap: 20px;
 }
+
 .intro {
   align-self: center;
 }
+
 span.heading {
   font-size: $font-headings;
   color: $call-to-action;
   font-family: $font-family;
   padding: 10px 0px;
 }
+
 span.sub-heading {
   font-size: $font-sub-headings;
   color: $text-color-white;
   font-family: $font-family;
 }
+
 .intro-img {
   width: 500px;
 }
+
 .intro-img img {
   width: 100%;
   border-radius: 50px;
@@ -119,16 +293,19 @@ span.sub-heading {
   border-radius: 11px;
   outline: 2px solid $call-to-action;
   box-shadow: 0px 0px 10px $secondary-color;
+
   &:hover {
     background-color: $call-to-action;
     color: $text-color-white;
     rotate: 3deg;
   }
+
   a {
     text-align: center;
     text-decoration: none;
     color: $secondary-color;
     font-size: $font-paragraphs;
+
     &:hover {
       color: $text-color-white;
     }
@@ -145,10 +322,12 @@ span.sub-heading {
   align-items: center;
   gap: 30px;
 }
+
 .about-us h1 {
   font-size: $font-sub-headings;
   color: $secondary-color;
 }
+
 .about-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -159,6 +338,7 @@ span.sub-heading {
   margin: 0px 150px;
   padding: 10px;
   gap: 30px;
+
   .jacky,
   .lucky {
     justify-self: center;
@@ -169,6 +349,7 @@ span.sub-heading {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
     p {
       text-align: justify;
       font-size: $font-paragraphs;
@@ -178,6 +359,7 @@ span.sub-heading {
       margin: 5px;
       width: auto;
     }
+
     img {
       width: 80%;
       border-radius: 10px;
@@ -194,6 +376,7 @@ span.sub-heading {
   padding: 20px;
   align-items: center;
 }
+
 .favourites h1 {
   text-align: center;
   padding: 50px 0px;
@@ -201,10 +384,11 @@ span.sub-heading {
   color: $secondary-color;
 }
 
-#cardslide{
+#cardslide {
   display: flex;
   gap: 5px;
-  img{
+
+  img {
     float: right;
     width: 100%;
     border-radius: 10px;
@@ -223,7 +407,7 @@ span.sub-heading {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -264,6 +448,7 @@ span.sub-heading {
     overflow-x: hidden;
     overlay: hidden;
   }
+
   .navbar {
     width: 100%;
     height: auto;
@@ -273,10 +458,12 @@ span.sub-heading {
     flex-direction: column;
     align-items: center;
   }
+
   .navbar h1 a {
     text-decoration: none;
     color: $secondary-color;
   }
+
   .navbar ul {
     display: inline-block;
     justify-content: center;
@@ -289,6 +476,7 @@ span.sub-heading {
   .navbar ul li {
     padding: 0 10px;
   }
+
   .navbar ul li a {
     text-decoration: none;
     color: $text-color-white;
@@ -296,6 +484,7 @@ span.sub-heading {
     font-family: $font-family;
     font-weight: 600;
   }
+
   .navbar ul li a:hover,
   .navbar ul li a:focus,
   .navbar ul li a:active {
@@ -311,6 +500,7 @@ span.sub-heading {
     flex-direction: column;
     align-items: center;
   }
+
   .home-content {
     width: 100%;
     margin: 100px 10px;
@@ -320,25 +510,30 @@ span.sub-heading {
     align-items: center;
     gap: 20px;
   }
+
   .intro {
     align-self: center;
     width: auto;
     margin: 10px;
   }
+
   span.heading {
     font-size: $font-headings;
     color: $call-to-action;
     font-family: $font-family;
     padding: 10px 0px;
   }
+
   span.sub-heading {
     font-size: $font-sub-headings;
     color: $text-color-white;
     font-family: $font-family;
   }
+
   .intro-img {
     max-width: 400px;
   }
+
   .intro-img img {
     width: 100%;
     padding: 10px;
@@ -354,6 +549,7 @@ span.sub-heading {
     align-items: center;
     justify-content: center;
     margin: 10px;
+
     .jacky,
     .lucky {
       justify-self: center;
@@ -364,10 +560,12 @@ span.sub-heading {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 10px;
-      p{
+
+      p {
         text-align: justify;
         padding: auto;
       }
+
       img {
         width: 50%;
         border-radius: 50px;
@@ -379,6 +577,7 @@ span.sub-heading {
   }
 
 }
+
 .intro-img img {
   width: 100%;
   padding: 10px;
@@ -460,6 +659,7 @@ span.sub-heading {
   padding: 15px;
   font-weight: 500;
 }
+
 .rate:hover {
   transform: scale(1.2);
 }
@@ -521,6 +721,7 @@ span.sub-heading {
   padding: 10px;
   box-shadow: 2px 2px 10px #120f0f;
 }
+
 #btns button:hover {
   transform: scale(1.2);
   background-color: red;
@@ -528,11 +729,12 @@ span.sub-heading {
 
 // contact us
 
-.contact-us{
+.contact-us {
   margin: 0;
   padding: 30px;
   background-color: $secondary-color;
-  h1{
+
+  h1 {
     text-align: center;
     font-size: 30px;
     font-family: $font-family;
@@ -540,19 +742,22 @@ span.sub-heading {
   }
 }
 
-#footerNav{
-  li{
-    a{
+#footerNav {
+  li {
+    a {
       text-decoration: none;
       color: $Primary-color;
       text-align: justify;
-      &:hover{
+
+      &:hover {
         color: $call-to-action;
       }
     }
   }
 }
-#adress{
+
+#adress {
   background-color: $Primary-color;
 }
+
 /*# sourceMappingURL=style.css.map */
