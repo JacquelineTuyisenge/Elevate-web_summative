@@ -38,7 +38,7 @@
 - 🚀 **Interactivity:** Enhanced user experience with JavaScript and jQuery for dynamic content and smooth interactions.
 - 🍪 **Data Management:** Utilized cookies and local storage for storing user preferences and session data.
 
-# 📝 **Instructions for Users:**
+## 📝 **Instructions for Users:**
 
 * **🔗 Accessing the Website:**
    - Click the link to our website to land on the homepage.
