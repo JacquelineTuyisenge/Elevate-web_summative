@@ -34,7 +34,8 @@ Provide clear documentation detailing the enhancements made to the original web 
 Include instructions for users on how to utilize the new features implemented.
 
 ## Technologies Used
-![Static Badge](https://img.shields.io/badge/Javascript-darkgreen?logo=Javascript)![Static Badge](https://img.shields.io/badge/Bootstrap-violet?logo=Bootstrap)![Static Badge](https://img.shields.io/badge/CSS3-blue?logo=CSS3&logoColor=blue&labelColor=white)![Static Badge](https://img.shields.io/badge/HTML5-orange?logo=HTML5&logoColor=orange&labelColor=white)![Static Badge](https://img.shields.io/badge/SCSS-pink?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Javascript-darkgreen?logo=Javascript)![Static Badge](https://img.shields.io/badge/Bootstrap-violet?logo=Bootstrap)![Static Badge](https://img.shields.io/badge/CSS3-blue?logo=CSS3&logoColor=blue&labelColor=white)![Static Badge](https://img.shields.io/badge/HTML5-orange?logo=HTML5&logoColor=orange&labelColor=white)![Static Badge](https://img.shields.io/badge/SCSS-pink)
+
 
 
 
