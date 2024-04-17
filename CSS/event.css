@@ -1,0 +1,17 @@
+body{
+    background-color:  rgb(175, 203, 118);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+.heart-icon {
+    float: right;
+  }
+.card-title {
+    font-weight: bold;
+    float: left;
+    width: 50%;
+  }

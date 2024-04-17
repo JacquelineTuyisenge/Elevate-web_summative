@@ -15,6 +15,8 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="events.css">
 
 <body id="body">
   <header id="header">
@@ -34,7 +36,7 @@
               <a class="nav-link" href="#about">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
+              <a class="nav-link" href="event.html">Events</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sign.html">Sign in</a>
@@ -61,201 +63,45 @@
 
   <main>
     <!--home page-->
-    <style>
-      @media (max-width: 768px) {
-        .cookie-consent-popup {
-          display: none !important;
-
-        }
-      }
-      .cookie-consent-popup {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
-      }
-
-      .cookie-consent-content {
-        text-align: center;
-      }
-
-      .btn {
-        padding: 10px 20px;
-
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        opacity: 0.8;
-
-      }
-
-      .home {
-        position: relative;
-        overflow: hidden;
-        height: 100vh;
-      }
-
-      .intro-img {
-        position: absolute;
-        top: 7%;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        float: right;
-        object-fit: cover;
-        object-position: center;
-        overflow: hidden;
-        animation: float 5s ease-in-out infinite;
-        width: 50%;
-        animation: slide-up 10s linear infinite;
-      }
-
-      .floating-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        animation: slide-up 10s linear infinite;
-
-      }
-
-      .home-content {
-        position: relative;
-        z-index: 1;
-        font-size: 80px;
-        padding: 20px;
-        text-align: left;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-        float: left;
-        width: 50%;
-        padding: 50px;
-
-
-
-      }
-
-      #heading {
-        animation: slide-left 5s forwards;
-      }
-
-      .moving-text {
-        opacity: 0;
-        animation: fade-in 10s forwards;
-
-      }
-
-      .jacky,
-      .lucky {
-        animation: slide-right 5s forwards;
-
-      }
-
-      #about {
-        animation: slide-up 10s linear infinite;
-      }
-
-      @keyframes fade-in {
-        0% {
-          opacity: 0;
-        }
-
-        100% {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slide-up {
-        0% {
-          transform: translateY(-6%);
-        }
-
-        100% {
-          transform: translateY(0);
-        }
-
-      }
-
-      @keyframes slide-left {
-        0% {
-          transform: translateX(-6%);
-        }
-
-        100% {
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slide-right {
-        0% {
-          transform: translateX(6%);
-        }
-
-        100% {
-          transform: translateX(0);
-        }
-
-      }
-
-      @media screen and (max-width: 768px) {
-        .home-content {
-          padding: 10px;
-        }
-      }
-
-      @keyframes animatedBackground {
-        0% {
-          background-position: 0 0;
-        }
-
-        100% {
-          background-position: 100% 0;
-        }
-      }
-
-      .header {
-        background-image: url('your-image.jpg');
-        animation: animatedBackground 10s linear infinite;
-      }
-
-
-      .social-media-icons .bx {
-        font-size: 40px;
-      }
-    </style>
     </head>
 
     <body>
       <main>
-        <section class="home" id="home">
-          <div class="intro-img">
-            <img src="images/home-bg-img.jpg" alt="home image" class="floating-img" />
-          </div>
-          <div class="home-content">
-            <div class="intro">
-              <h2>
-                <span class="heading" id="heading"
-                  style="font-size: 60px; font-weight: bold;  animation: slide-left 5s forwards;">Welcome to <span
-                    class="heading" id="heading"
-                    style="color: rgb(2, 112, 2);font-size: 60px; font-weight: bold;">FoodShare,</span></span><br />
-                <br>
-                <span class="sub-heading moving-text" style="font-weight: bold;">
-                  where every plate holds a story and every heart finds a
-                  home!!</span>
-              </h2>
+        <section id="hero" class="d-flex justify-cntent-center align-items-center">
+          <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="5000">
 
-              <button class="btn" style="margin-top: 50px;"><a href="/">Get Started</a></button>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown" style="color:rgb(240, 3, 3) ; font-size: 60px;">
+                  Welcome to <span class="heading" id="heading"
+                    style="color: rgb(96, 190, 96);font-size: 60px; font-weight: bold;">FoodShare,</span></span><br /></span>
+                </h2>
+                <p class="animate__animated animate__fadeInUp" style="font-size: 30px;">where every plate holds a story
+                  and every heart finds a
+                  home!!</p>
+                <a href="" class="btn-get-started animate__animated animate__fadeInUp" id="btn">Get Started</a>
+              </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown"
+                  style="color: rgb(94, 186, 94);font-size: 60px; font-weight: bold;">Food Share,</h2>
+                <p class="animate__animated animate__fadeInUp">a platform where neighbors unite over shared meals,
+                  reducing waste and fostering community bonds. Explore diverse homemade dishes, snacks, and baked goods
+                  contributed by locals. Join us in creating a more sustainable and connected world through the joy of
+                  sharing food.</p>
+                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
         </section>
+
+
 
 
         <!--section about-->
@@ -273,15 +119,15 @@
                 <br>
                 <div class="social-media-icons">
                   <a href="https://www.twitter.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-twitter'
-                    style="color: rgb(12, 204, 217);"></i></a>
-                <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-linkedin'
-                    style="color:rgb(49, 122, 211) ;"></i></a>
-                <a href="https://www.facebook.com/in/jacqueline-tuyisenge/" target="_blank"><i
-                    class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/in/jacqueline-tuyisenge/" target="_blank"><i
-                    class='bx bxl-instagram' style="color: rgb(127, 12, 50);"></i></a>
-                <a href="https://www.github.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-github'
-                    style="color: rgb(55, 52, 52);"></i></a>
+                      style="color: rgb(12, 204, 217);"></i></a>
+                  <a href="https://www.linkedin.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-linkedin'
+                      style="color:rgb(49, 122, 211) ;"></i></a>
+                  <a href="https://www.facebook.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-facebook'></i></a>
+                  <a href="https://www.instagram.com/in/jacqueline-tuyisenge/" target="_blank"><i
+                      class='bx bxl-instagram' style="color: rgb(127, 12, 50);"></i></a>
+                  <a href="https://www.github.com/in/jacqueline-tuyisenge/" target="_blank"><i class='bx bxl-github'
+                      style="color: rgb(55, 52, 52);"></i></a>
 
 
                 </div>
@@ -312,8 +158,8 @@
                       style="color:rgb(49, 122, 211) ;"></i></a>
                   <a href="https://www.facebook.com/in/aloysie-murekatete/" target="_blank"><i
                       class='bx bxl-facebook'></i></a>
-                  <a href="https://www.instagram.com/in/aloysie-murekatete/" target="_blank"><i
-                      class='bx bxl-instagram' style="color: rgb(127, 12, 50);"></i></a>
+                  <a href="https://www.instagram.com/in/aloysie-murekatete/" target="_blank"><i class='bx bxl-instagram'
+                      style="color: rgb(127, 12, 50);"></i></a>
                   <a href="https://www.github.com/in/aloysie-murekatete/" target="_blank"><i class='bx bxl-github'
                       style="color: rgb(55, 52, 52);"></i></a>
 
@@ -333,145 +179,204 @@
           </div>
         </section>
 
-        <!-- favorite section -->
-
-        <section class="favourites" style="animation: fadeIn 5s ease-in; animation-delay: 0.5s; animation-fill-mode: forwards;">
-          <h1 id="favorites" style="animation: slideInDown 1s ease-in; font-weight: bold;">Favourites</h1>
-          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <div id="cardslide" class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Fufu Feast</h5>
-                        <p class="card-text">
-                          With supporting text below as a natural lead-in to
-                          additional content.
-                        </p>
-                        <button class="btn"><a href="/">Get Started</a></button>
-                      </div>
-                      <div>
-                        <img src="images/fufu.jpg" alt="fufuimage" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div id="cardslide" class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Jollof Feast</h5>
-                        <p class="card-text">
-                          With supporting text below as a natural lead-in to
-                          additional content.
-                        </p>
-                        <button class="btn"><a href="/">Get Started</a></button>
-                      </div>
-                      <div>
-                        <img src="images/jollof.jpg" alt="fufuimage" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <section class="event-list" id="events">
+          <h1>Events</h1>
+          <div class="grid-container">
+            <div class="card" id="card">
+              <div class="card-img-container">
+                <img src="images/Youth_gathering.jpg" id="image1" alt="Event 1 Image" class="card-img">
               </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div id="cardslide" class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Fufu Feast</h5>
-                        <p class="card-text">
-                          With supporting text below as a natural lead-in to
-                          additional content.
-                        </p>
-                        <button class="btn"><a href="/">Get Started</a></button>
-                      </div>
-                      <div>
-                        <img src="images/fufu.jpg" alt="fufuimage" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div id="cardslide" class="card">
-                      <div class="card-body">
-                        <h5 class="card-title">Fufu Feast</h5>
-                        <p class="card-text">
-                          With supporting text below as a natural lead-in to
-                          additional content.
-                        </p>
-                        <button class="btn"><a href="/">Get Started</a></button>
-                      </div>
-                      <div>
-                        <img src="images/fufu.jpg" alt="fufuimage" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="card-content">
+                <p>Date: January 15, 2024</p>
+                <button class="details-btn">Details</button>
+              </div>
+              <div class="card-description">
+                <h2>Youth Gathering</h2>
+                <p>Description of Youth Gathering.</p>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
 
-        <!-- contact us -->
+            <div class="card" id="card">
+              <div class="card-img-container">
+                <img src="images/granniescook.jpg" alt="Event 2 Image" class="card-img">
+              </div>
+              <div class="card-content">
+                <p>Date: February 10, 2024</p>
+                <button class="details-btn">Details</button>
+              </div>
+              <div class="card-description">
+                <h2>Grannies Cooking</h2>
+                <p>Description of Grannies Cooking.</p>
+              </div>
+            </div>
 
-        <section class="contact-us">
-          <h1 id="contact" class="text-center p-3 m-3">Contact Us</h1>
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <h3 class="p-5 text-light">What we do</h1>
-                  <ul id="footerNav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="#favorites">Favourites</a></li>
-                  </ul>
+            <div class="card" id="card">
+              <div class="card-img-container">
+                <img src="images/Familymeal.jpg" alt="Event 3 Image" class="card-img">
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <h3 class="p-5 text-light">Our Adress</h1>
-                  <ul id="adress" class="list-group">
-                    <li class="list-group-item bg-success-light">1, Kibagabaga Street, 5th Avenue, Lagos.</li>
-                    <li class="list-group-item bg-success-light">Tel: +223 987 678 999</li>
-                    <li class="list-group-item bg-success-light">Email: foodshare@yahoo.com</li>
-                    <li class="list-group-item bg-success-light">web: foodshare.com</li>
-                  </ul>
+              <div class="card-content">
+                <p>Date: March 5, 2024</p>
+                <button class="details-btn">Details</button>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div id="myModal" class="modal">
-                  <div class="modal-content">
-                    <span class="close">&#10004;</span>
-                    <p id="modalText"></p>
-                  </div>
-                </div>
-                <h3 class="p-5 text-light">Get in touch</h1>
-                  <form id="getInTouch" class="row g-3 border rounded p-3 bg-success-light">
-                    <div class="col-12">
-                      <label for="inputEmail4" class="form-label text-white">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" name="email">
-                      <div id="emailError" class="form-text error-message text-danger"></div>
-                    </div>
-                    <div class="col-12">
-                      <label for="inputmessage" class="form-label text-white">Messages</label>
-                      <input type="text" class="form-control" placeholder="Hello...." id="message" name="message">
-                      <div id="messageError" class="form-text error-message text-danger"></div>
-                    </div>
-                    <div class="col-12">
-                      <button type="submit" class="btn text-center text-white">SEND</button>
-                    </div>
-                  </form>
+              <div class="card-description">
+                <h2>Family Dinner</h2>
+                <p>Description of Family Dinner.</p>
               </div>
             </div>
           </div>
-        </section>
+
+
+          <button id="see-more"
+            style="animation: fadeIn 5s ease-in; animation-delay: 0.5s; animation-fill-mode: forwards; border: 2px solid rgb(214, 40, 40); border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: bold;">See
+            More</button>
+          <br>
+          <br>
+
+
+
+          <!-- events section -->
+
+          <section class="favourites"
+            style="animation: fadeIn 5s ease-in; animation-delay: 0.5s; animation-fill-mode: forwards;" id="favourites">
+            <h1 id="favorites" style="animation: slideInDown 1s ease-in; font-weight: bold;">Favourites</h1>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <div id="cardslide" class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Fufu Feast</h5>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                          <button class="btn"><a href="/">Read More</a></button>
+                        </div>
+                        <div>
+                          <img src="images/fufu.jpg" alt="fufuimage" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div id="cardslide" class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Jollof Feast</h5>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                          <button class="btn"><a href="/">Read More</a></button>
+                        </div>
+                        <div>
+                          <img src="images/jollof.jpg" alt="fufuimage" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div id="cardslide" class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Fufu Feast</h5>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                          <button class="btn"><a href="/">Read More</a></button>
+                        </div>
+                        <div>
+                          <img src="images/Burgers.jpg" alt="fufuimage" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div id="cardslide" class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Fufu Feast</h5>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                          <button class="btn"><a href="/">Read More</a></button>
+                        </div>
+                        <div>
+                          <img src="images/dinner.jpg" alt="fufuimage" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- contact us -->
+
+          <section class="contact-us">
+            <h1 id="contact" class="text-center p-3 m-3">Contact Us</h1>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <h3 class="p-5 text-light">What we do</h1>
+                    <ul id="footerNav">
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="events.html">Events</a></li>
+                      <li><a href="#favorites">Favourites</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <h3 class="p-5 text-light">Our Adress</h1>
+                    <ul id="adress" class="list-group">
+                      <li class="list-group-item bg-success-light">1, Kibagabaga Street, 5th Avenue, Lagos.</li>
+                      <li class="list-group-item bg-success-light">Tel: +223 987 678 999</li>
+                      <li class="list-group-item bg-success-light">Email: foodshare@info.rw</li>
+                      <a>
+                        <li class="list-group-item bg-success-light"><a>www.foodshare.com</a> </li>
+                      </a>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&#10004;</span>
+                      <p id="modalText"></p>
+                    </div>
+                  </div>
+                  <h3 class="p-5 text-light">Get in touch</h1>
+                    <form id="getInTouch" class="row g-3 border rounded p-3 bg-success-light">
+                      <div class="col-12">
+                        <label for="inputEmail4" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" name="email">
+                        <div id="emailError" class="form-text error-message text-danger"></div>
+                      </div>
+                      <div class="col-12">
+                        <label for="inputmessage" class="form-label text-white">Messages</label>
+                        <input type="text" class="form-control" placeholder="Hello...." id="message" name="message">
+                        <div id="messageError" class="form-text error-message text-danger"></div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn text-center text-white">SEND</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </section>
       </main>
       <footer class="text-center text-white bg-secondary p-0 m-0">
         <p class="p-3 m-3 text-dark text-center">&copy; 2023 Food Share app, All Rights Reserved</p>
@@ -488,6 +393,239 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+      <style>
+        @media (max-width: 768px) {
+          .cookie-consent-popup {
+            display: none !important;
+
+          }
+        }
+
+        .home {
+          position: relative;
+          overflow: hidden;
+          height: 100vh;
+
+        }
+
+        #bend-bottom {
+          position: absolute;
+          bottom: -50px;
+          /* Adjust this value to control the bending depth */
+          left: 0;
+          width: 100%;
+          height: 100px;
+          /* Adjust this value to control the bending height */
+          background-color: transparent;
+          border-top-left-radius: 50%;
+          border-top-right-radius: 50%;
+          transform-origin: bottom center;
+          animation: bend 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes bend {
+          0% {
+            transform: rotate(-2deg);
+          }
+
+          100% {
+            transform: rotate(2deg);
+          }
+        }
+
+        .cookie-consent-popup {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: none;
+        }
+
+        .cookie-consent-content {
+          text-align: center;
+        }
+
+        .about-us,
+        .favourites,
+        .contact-us {
+          animation: fadeIn 5s ease-in;
+        }
+
+        /* Adjust animation delay for each section */
+        .about-us {
+          animation-delay: 0.5s;
+        }
+
+        .favourites {
+          animation-delay: 1s;
+        }
+
+        .contact-us {
+          animation-delay: 1.5s;
+        }
+
+        .btn {
+          padding: 10px 20px;
+
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          opacity: 0.8;
+
+        }
+
+        .home {
+          position: relative;
+          overflow: hidden;
+          height: 100vh;
+
+        }
+
+        .intro-img {
+          position: absolute;
+          top: 7%;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          float: right;
+          object-fit: cover;
+          object-position: center;
+          overflow: hidden;
+          animation: float 5s ease-in-out infinite;
+          width: 50%;
+          animation: slide-up 10s linear infinite;
+          animation: bend 5s ease-in-out infinite alternate;
+        }
+
+        .floating-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          animation: slide-up 10s linear infinite;
+
+        }
+
+        .home-content {
+          position: relative;
+          z-index: 1;
+          font-size: 80px;
+          padding: 20px;
+          text-align: left;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          float: left;
+          width: 50%;
+          padding: 50px;
+
+
+
+        }
+
+        .heading {
+          animation: bend 5s ease-in-out infinite alternate;
+          animation: bend 5s ease-in-out infinite alternate;
+        }
+
+        .moving-text {
+          opacity: 0;
+          animation: fade-in 10s forwards;
+
+        }
+
+        .jacky,
+        .lucky {
+          animation: slide-right 5s forwards;
+
+        }
+
+        #about {
+          animation: slide-up 10s linear infinite;
+
+        }
+
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slide-up {
+          0% {
+            transform: translateY(-6%);
+          }
+
+          100% {
+            transform: translateY(0);
+          }
+
+        }
+
+        @keyframes slide-left {
+          100% {
+            transform: translateX(-6%);
+          }
+
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-right {
+          0% {
+            transform: translateX(6%);
+          }
+
+          100% {
+            transform: translateX(0);
+          }
+
+        }
+
+        @media screen and (max-width: 768px) {
+          .home-content {
+            padding: 10px;
+          }
+        }
+
+        @keyframes animatedBackground {
+          0% {
+            background-position: 0 0;
+          }
+
+          100% {
+            background-position: 100% 0;
+          }
+        }
+
+        .header {
+          background-image: url('your-image.jpg');
+          animation: animatedBackground 10s linear infinite;
+        }
+
+
+        .social-media-icons .bx {
+          font-size: 40px;
+        }
+
+        .social-media-icons .bx:hover {
+
+          color: #FF8C00;
+
+        }
+      </style>
     </body>
 
 </html>

@@ -1,26 +1,28 @@
-// Function to check if the user has accepted cookies
-function hasAcceptedCookies() {
-  return localStorage.getItem('cookiesAccepted') === 'true';
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieConsentPopup = document.getElementById("cookieConsentPopup");
+  const acceptCookiesBtn = document.getElementById("acceptCookiesBtn");
 
-// Function to show the cookie consent popup
-function showCookieConsentPopup() {
-  if (!hasAcceptedCookies()) {
-    document.getElementById('cookieConsentPopup').style.display = 'block';
+  // Function to check if cookies are accepted
+  function areCookiesAccepted() {
+    return localStorage.getItem("cookiesAccepted") === "true";
   }
-}
 
-// Function to hide the cookie consent popup and save user's consent
-function acceptCookies() {
-  localStorage.setItem('cookiesAccepted', 'true');
-  document.getElementById('cookieConsentPopup').style.display = 'none';
-}
+  // Function to show the cookie consent popup
+  function showCookieConsentPopup() {
+    if (!areCookiesAccepted()) {
+      cookieConsentPopup.style.display = "block";
+    }
+  }
 
-// Event listener for accept cookies button
-document.getElementById('acceptCookiesBtn').addEventListener('click', function() {
-  acceptCookies();
-  // Add any additional functionality you want to execute after accepting cookies here
+  // Function to accept cookies and hide the popup
+  function acceptCookies() {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieConsentPopup.style.display = "none";
+  }
+
+  // Event listener for accepting cookies
+  acceptCookiesBtn.addEventListener("click", acceptCookies);
+
+  // Show the cookie consent popup on page load
+  showCookieConsentPopup();
 });
-
-// Show the cookie consent popup when the page loads
-window.addEventListener('load', showCookieConsentPopup);
