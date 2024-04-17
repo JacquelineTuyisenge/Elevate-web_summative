@@ -46,12 +46,12 @@
 * **🔍 Exploring Features:**
    - Navigate through sections using the intuitive navigation bar.
    - Dive into specific sections like events to view detailed cards.
-   - Expand card details by clicking "See More" to access single-page views.
-   - Like an event? Simply click the heart icon to mark it as a favorite.
-   - Discover more events by clicking "See More Events" and filter them by category.
+   - Expand card details by clicking "Read More" to access single-page views.
+   - Like an event? first sign In , then Simply click the heart icon to mark it as a favorite.
+   - Discover more events by clicking "See More" button.
 
 * **🤝 Engagement:**
-   - Sign in to unlock personalized features and preferences.
+   - Sign in to mark your favorite events as favorites.
    - Share your feedback or reach out to us using the provided contact form.
 
 
