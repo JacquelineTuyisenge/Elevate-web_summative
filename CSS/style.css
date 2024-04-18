@@ -5,6 +5,153 @@
   font-family: "poppins", sans-serif;
 }
 
+/* CSS for cookie consent popup */
+.cookie-consent-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.cookie-consent-content {
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.intro-img {
+  position: absolute;
+  top: 7%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  float: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
+  animation: float 5s ease-in-out infinite;
+  width: 50%;
+  animation: slide-up 10s linear infinite;
+}
+
+.floating-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: slide-up 10s linear infinite;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  font-size: 80px;
+  padding: 20px;
+  text-align: left;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+
+#heading {
+  animation: slide-left 5s forwards;
+}
+
+.moving-text {
+  opacity: 0;
+  animation: fade-in 10s forwards;
+  /* Adjust the duration here */
+}
+
+.jacky,
+.lucky {
+  animation: slide-right 5s forwards;
+}
+
+#about {
+  animation: slide-up 10s linear infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(-6%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(-6%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(6%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-content {
+    padding: 10px;
+  }
+}
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.header {
+  background-image: url("your-image.jpg");
+  animation: animatedBackground 10s linear infinite;
+}
+
+.social-media-icons .bx {
+  font-size: 40px;
+}
+
 #body {
   width: 100%;
   height: 100%;

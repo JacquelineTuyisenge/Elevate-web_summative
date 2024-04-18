@@ -14,6 +14,9 @@ $(document).ready(function () {
     $("#signin-form").show();
   });
 
+
+  // sign-up submission
+
   $("#signup-form").submit(function (event) {
     event.preventDefault();
     // Send email
@@ -31,8 +34,12 @@ $(document).ready(function () {
       return;
     } else {
       
+      // store user information in localstorage
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userPassword", passrd);
+
     // Display success message in modal
-    $("#modalText").text("Form submitted successfully");
+    $("#modalText").text("signing up is successfull!, sign In to continue");
     $("#myModal").css("display", "block");
     
   $(".close").click(function () {
@@ -85,15 +92,32 @@ $(document).ready(function () {
       );
       return;
     }
-  
-    // Display success message in modal
-    $("#modalText").text("Form submitted successfully");
-    $("#myModal").css("display", "block");
+
+    
+    // Retrieve stored credentials from local storage
+    var storedEmail = localStorage.getItem('userEmail');
+    var storedPassword = localStorage.getItem('userPassword');
+
+    //validate input
+
+    if (email === storedEmail && passrd === storedPassword){
+      localStorage.setItem('loggedIn', true);
+
+      // Display success message in modal
+      $("#modalText").text("signed In successfully");
+      $("#myModal").css("display", "block");
+
+      
+    } else {
+      alert("Invalid email or password.");
+    }
+    
   });
   
   $(".close").click(function () {
     $("#myModal").css("display", "none");
     $("#signin-name, #signin-email, #signin-password").val(""); // Clear the input values
+    window.location.href = "index.html";
   });
   
   // Close the modal popup when the user clicks anywhere outside of it

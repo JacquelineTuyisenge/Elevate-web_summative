@@ -6,6 +6,51 @@ import {EMAIL_FROM} from "../env.js";
 
 
 $(document).ready(function () {
+
+// check if user is logged In
+
+if (localStorage.getItem('loggedIn')) {
+  updateNavbar();
+}
+
+//updateNavBar function
+
+function updateNavbar() {
+  var loggedInUser = localStorage.getItem('userEmail');
+  var initials = loggedInUser.split("@")[0].slice(0, 2).toLocaleUpperCase();
+
+  $("#sign-link").text(initials).addClass("bg-success text-white").css({
+    "padding": "5px 10px",
+    "cursor": "pointer"
+}).removeAttr("href").click(function () {
+    //show logout option
+
+    var logoutOption = $("<a href='#' class='nav-link'>Logout</a>");
+    logoutOption.click(function () {
+      localStorage.removeItem('loggedIn'); // remove logged in flag
+      $(this).remove(); // remove logout option
+      $("#sign-link").text("Sign In").removeClass("bg-success").css("padding", "");
+      $("#sign-link").attr("href", "sign.html"); // Reset href to sign-in page
+    });
+    $(this).after(logoutOption);
+  });
+}
+
+// get initials
+
+// function getInitials(email) {
+//   var parts = email.split("@")[0];
+//   var initials = parts.cha
+//   return initials;
+// }
+
+
+// navigate to event.html
+
+  $("#see-more").click(function () {
+    window.location.href = "event.html";
+  });
+
   $("#getInTouch").submit(function (event) {
     event.preventDefault();
     // Send email
