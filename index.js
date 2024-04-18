@@ -1,28 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const cookieConsentPopup = document.getElementById("cookieConsentPopup");
-  const acceptCookiesBtn = document.getElementById("acceptCookiesBtn");
+// Function to show the cookie consent popup
+function showCookiePopup() {
+  var cookiePopup = document.getElementById('cookieConsentPopup');
+  cookiePopup.style.display = 'block';
 
-  // Function to check if cookies are accepted
-  function areCookiesAccepted() {
-    return localStorage.getItem("cookiesAccepted") === "true";
-  }
+  // Add event listener to the accept button
+  document.getElementById('acceptCookiesBtn').addEventListener('click', function() {
+    // Hide the cookie popup when accept button is clicked
+    cookiePopup.style.display = 'none';
+  });
+}
 
-  // Function to show the cookie consent popup
-  function showCookieConsentPopup() {
-    if (!areCookiesAccepted()) {
-      cookieConsentPopup.style.display = "block";
-    }
-  }
-
-  // Function to accept cookies and hide the popup
-  function acceptCookies() {
-    localStorage.setItem("cookiesAccepted", "true");
-    cookieConsentPopup.style.display = "none";
-  }
-
-  // Event listener for accepting cookies
-  acceptCookiesBtn.addEventListener("click", acceptCookies);
-
-  // Show the cookie consent popup on page load
-  showCookieConsentPopup();
-});
+// Call the function to show the popup when the page loads
+window.onload = function() {
+  showCookiePopup();
+};

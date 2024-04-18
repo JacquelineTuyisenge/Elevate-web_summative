@@ -143,6 +143,10 @@
     background-position: 100% 0;
   }
 }
+#header {
+  z-index: 1000;
+}
+
 .header {
   background-image: url("your-image.jpg");
   animation: animatedBackground 10s linear infinite;
@@ -174,6 +178,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  z-index: 1000;
 }
 
 #logo {
@@ -188,6 +193,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: transparent;
 }
 
 .navbar ul li {
@@ -353,7 +359,6 @@ span.sub-heading {
   box-shadow: 0px 0px 10px rgb(1, 42, 1);
   height: 400px;
 }
-
 /* Modal popup styles */
 .modal {
   display: none;
@@ -364,7 +369,7 @@ span.sub-heading {
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -374,7 +379,6 @@ span.sub-heading {
   border: 3px solid #1e3029;
   width: 80%;
   max-width: 300px;
-  border-radius: 10px;
 }
 
 .close {
@@ -390,7 +394,6 @@ span.sub-heading {
   text-decoration: none;
   cursor: pointer;
 }
-
 .error-message {
   color: red;
   font-size: 0.8em;
@@ -679,6 +682,7 @@ span.sub-heading {
   text-decoration: none;
   color: rgb(175, 203, 118);
   text-align: justify;
+  background-color: transparent;
 }
 #footerNav li a:hover {
   color: rgb(240, 3, 3);

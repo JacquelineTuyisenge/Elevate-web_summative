@@ -46,7 +46,6 @@
 * **🔍 Exploring Features:**
    - Navigate through sections using the intuitive navigation bar.
    - Dive into specific sections like events to view detailed cards.
-   - Expand card details by clicking "Read More" to access single-page views.
    - Like an event? first sign In , then Simply click the heart icon to mark it as a favorite.
    - Discover more events by clicking "See More" button.
 

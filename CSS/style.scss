@@ -226,6 +226,7 @@ $text-color-green: rgb(1, 36, 1);
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: transparent;
 }
 
 .navbar ul li {
@@ -422,6 +423,7 @@ span.sub-heading {
   width: 80%;
   max-width: 300px;
   border-radius: 10px;
+  color: #102102;
 }
 
 .close {
@@ -752,6 +754,7 @@ span.sub-heading {
       text-decoration: none;
       color: $Primary-color;
       text-align: justify;
+      background-color: transparent;
 
       &:hover {
         color: $call-to-action;

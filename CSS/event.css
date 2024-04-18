@@ -1,6 +1,6 @@
 body{
-    background-color:  rgb(175, 203, 118);
-    font-family: 'Poppins', sans-serif;
+  background-color:  rgb(175, 203, 118);
+  font-family: 'Poppins', sans-serif;
 
 }
 
@@ -8,10 +8,10 @@ body{
 
 
 .heart-icon {
-    float: right;
-  }
+  float: right;
+}
 .card-title {
-    font-weight: bold;
-    float: left;
-    width: 50%;
-  }
+  font-weight: bold;
+  float: left;
+  width: 50%;
+}

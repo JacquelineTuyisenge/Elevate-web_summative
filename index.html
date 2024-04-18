@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="events.css">
 
+
 <body id="body">
   <header id="header">
     <nav id="navbar" class="navbar navbar-expand-lg">
@@ -51,15 +52,15 @@
   </header>
 
   <!-- Cookie consent popup -->
-  <div id="cookieConsentPopup" class="cookie-consent-popup">
+  <div id="cookieConsentPopup" class="cookie-consent-popup" style="background-color: #bfe79e; box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);">
     <div class="cookie-consent-content">
       <h3 class="text-dark">This website uses cookies</h3>
       <p class="text-dark">We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept
         our use of cookies.</p>
-      <a href="#home"><button id="acceptCookiesBtn" class="btn btn-success">Accept</button></a>
+      <button id="acceptCookiesBtn" class="btn btn-success">Accept</button>
     </div>
   </div>
-
+ 
 
   <main>
     <!--home page-->
@@ -111,7 +112,7 @@
             <div class="jacky" style=" box-shadow: 0px 0px 10px rgba(0, 0, 0.5, 1.5); height: 100%; ">
               <div>
                 <p>
-                  Meet<span style="color: rgb(1, 34, 1); font-weight: bold; font-size: 25px;"> Jacqueline Tuyisenge</span>, one of the creative minds behind our food sharing community. With a deep
+                  Meet<span style="color: rgb(1, 34, 1); font-weight: bold; font-size: 25px;">Jacqueline Tuyisenge</span>, one of the creative minds behind our food sharing community. With a deep
                   passion for culinary arts, Jacqueline's love for cooking transcends the kitchen and extends to the
                   heart
                   of our app.</p>
@@ -142,7 +143,7 @@
             <div class="lucky" style=" box-shadow: 0px 0px 10px rgba(0, 0, 0.5, 1.5);">
               <div>
                 <p>
-                  Meet<span style="color: rgb(1, 34, 1); font-weight: bold; font-size: 25px;"> Aloysie Murekatete</span>,  the one who brings a unique flair to our food sharing app. Aloysie's journey
+                  Meet<span style="color: rgb(1, 34, 1); font-weight: bold; font-size: 25px;">Aloysie Murekatete</span>,  the one who brings a unique flair to our food sharing app. Aloysie's journey
                   in
                   the world of cooking is marked by a genuine curiosity and a desire to experiment with diverse
                   cuisines.
@@ -200,7 +201,7 @@
                             With supporting text below as a natural lead-in to
                             additional content.
                           </p>
-                          <button class="btn"><a href="/">Read More</a></button>
+                          <button class="btn"><a href="event.html">Read More</a></button>
                         </div>
                         <div>
                           <img src="images/fufu.jpg" alt="fufuimage" />
@@ -215,7 +216,7 @@
                             With supporting text below as a natural lead-in to
                             additional content.
                           </p>
-                          <button class="btn"><a href="/">Read More</a></button>
+                          <button class="btn"><a href="event.html">Read More</a></button>
                         </div>
                         <div>
                           <img src="images/jollof.jpg" alt="fufuimage" />
@@ -235,7 +236,7 @@
                             With supporting text below as a natural lead-in to
                             additional content.
                           </p>
-                          <button class="btn"><a href="/">Read More</a></button>
+                          <button class="btn"><a href="event.html">Read More</a></button>
                         </div>
                         <div>
                           <img src="images/Burgers.jpg" alt="fufuimage" />
@@ -250,7 +251,7 @@
                             With supporting text below as a natural lead-in to
                             additional content.
                           </p>
-                          <button class="btn"><a href="/">Read More</a></button>
+                          <button class="btn"><a href="event.html">Read More</a></button>
                         </div>
                         <div>
                           <img src="images/dinner.jpg" alt="fufuimage" />
@@ -273,9 +274,9 @@
             </div>
 
             
-            <button id="see-more"
+            <a href="event.html"><button id="see-more"
             style="animation: fadeIn 5s ease-in; animation-delay: 0.5s; animation-fill-mode: forwards; border: 2px solid rgb(214, 40, 40); border-radius: 10px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); font-weight: bold;">See
-            More</button>
+            More</button></a>
           </section>
 
           <!-- contact us -->
@@ -289,7 +290,7 @@
                     <ul id="footerNav">
                       <li><a href="#home">Home</a></li>
                       <li><a href="#about">About</a></li>
-                      <li><a href="events.html">Events</a></li>
+                      <li><a href="event.html">Events</a></li>
                       <li><a href="#favorites">Favourites</a></li>
                     </ul>
                 </div>
@@ -306,11 +307,12 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div id="myModal" class="modal">
-                    <div class="modal-content">
+                    <div class="modal-content p-3 border border-success" >
                       <span class="close">&#10004;</span>
-                      <p id="modalText"></p>
+                      <p id="modalText" class="text-dark" ></p>
                     </div>
                   </div>
+                  
                   <h3 class="p-5 text-light">Get in touch</h1>
                     <form id="getInTouch" class="row g-3 border rounded p-3 bg-success-light">
                       <div class="col-12">
@@ -347,6 +349,23 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+      <style>
+        .cookie-consent-popup {
+          position: fixed;
+          top: 20px; /* Adjust this value to change the distance from the top */
+          background-color: #669e5d;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: none;
+          z-index: 9999; /* Ensure it appears above other content */
+          height: 25vh;
+          width: 120%;
+          margin-top: 520px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          
+        }
+      </style>
       <style>
         @media (max-width: 768px) {
           .cookie-consent-popup {
